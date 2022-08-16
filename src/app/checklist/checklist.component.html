@@ -1,0 +1,43 @@
+<div class="container">
+    <br>
+    <button class="btn-primary" disabled>Add new Record</button>
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+      <div class="mb-3 col-md-4">
+        <label for="gender" class="form-label">Select AuditType:</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="Internal" id="internal" name="AuditType" [(ngModel)]="auditType.auditType" required>
+            <label class="form-check-label" for="internal">
+              Internal
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="SOX" id="sox" name="AuditType" [(ngModel)]="auditType.auditType" required>
+            <label class="form-check-label" for="sox">
+              SOX
+            </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-md">show questions</button>
+    </form>
+    </div>
+    <br>
+<div class="container" *ngIf="questions.length>0">
+<form ngNativeValidate (ngSubmit)="onSubmit1()">
+  <br>
+  <br>
+  <table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th colspan="2" scope="col">Questions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let question of questions;let i = index">
+        <td>{{question.question}}</td>
+        <td><input type="checkbox" name="{{question.questionId}}" [(ngModel)]="checks[i].isSelected"></td>
+        
+    </tbody>
+  </table>
+  <button type="submit" class="btn btn-primary btn-md">Submit</button>
+</form>
+</div>  

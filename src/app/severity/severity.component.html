@@ -1,0 +1,31 @@
+<br>
+<div class="container">
+<button class="btn-primary" disabled>Delete Record</button>
+<div class="contianer col-lg-10">
+<br>
+<table class="table table-striped">  
+    <tbody>
+    <tr class="table-dark">
+        <td class="table-dark">Audit ID</td>
+        <td class="table-secondary">{{auditResponse.auditId}}</td>
+    </tr>
+    <tr class="table-dark">
+        <td class="table-dark">ProjectManager Name</td>
+        <td class="table-secondary">{{auditResponse.managerName}}</td>
+    </tr>
+    <tr class="table-dark">
+        <td class="table-dark">Project Name</td>
+        <td class="table-secondary">{{auditResponse. projectName}}</td>
+    </tr>
+    <tr class="table-dark">
+        <td class="table-dark">Project Status</td>
+        <td class="table-secondary">{{auditResponse. projectExecutionStatus}}</td>
+    </tr>
+    <br>
+    <div class="container">
+       <h4>Remedial Action is:</h4>{{auditResponse.remedialActionDuration}}
+    </div>
+</tbody>
+</table>
+</div>
+</div>

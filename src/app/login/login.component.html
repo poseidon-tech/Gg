@@ -1,0 +1,17 @@
+<br>
+<div class="container">
+    <button class="btn-dark" disabled>Login to access</button>
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+          <div class="mb-3 mt-3 col-md-4">
+            <label for="username" class="form-label">Enter Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" [(ngModel)]="authreq.username"  required />         
+          </div>
+          <div class="mb-3 col-md-4">
+            <label for="password" class="form-label">Enter password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="authreq.password" required />
+            <br>
+            <button type="submit" class="btn btn-primary btn-md">Login</button>
+          </div>
+
+    </form>
+</div>
