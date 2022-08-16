@@ -33,12 +33,22 @@ export class ChecklistComponent implements OnInit {
   checklist()
   {
     let fetch : Question[] = [];
-    this.audit.auditcheckList(this.auditType).subscribe(
+    this.audit.auditcheckListHealth().subscribe(
+    data=>{
+    this.audit.validateToken().subscribe(
+      data=>{
+      if(data.valid==false)
+      {
+        console.log("token expired")
+        localStorage.removeItem("token")
+        this.router.navigate(['loginAgain'])
+      }
+      this.audit.auditcheckList(this.auditType).subscribe(
       (questions:Question[])=>{
       fetch=questions
       console.log(questions)
-      //this.router.navigate(['/employees']) this won't reload page
-       
+      
+        
       },
       error=>
       {
@@ -49,7 +59,16 @@ export class ChecklistComponent implements OnInit {
         this.questions =fetch
         
       }
-    )
+    )},error=>{
+     
+      console.log("token expired")
+      localStorage.removeItem("token")
+      this.router.navigate(['login'])
+    })
+  },
+    error=>
+    {console.log("checklist microservice is down")
+  console.log(error)})
   }
   onSubmit1()
   {

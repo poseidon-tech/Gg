@@ -1,6 +1,8 @@
+<app-header></app-header>   
+<body>
 <br>
 <div class="container">
-<button class="btn-primary" disabled>Delete Record</button>
+<button class="dark" disabled>AuditDetails</button>
 <div class="contianer col-lg-10">
 <br>
 <table class="table table-striped">  
@@ -10,11 +12,11 @@
         <td class="table-secondary">{{auditResponse.auditId}}</td>
     </tr>
     <tr class="table-dark">
-        <td class="table-dark">ProjectManager Name</td>
+        <td class="table-dark">Project Name</td>
         <td class="table-secondary">{{auditResponse.managerName}}</td>
     </tr>
     <tr class="table-dark">
-        <td class="table-dark">Project Name</td>
+        <td class="table-dark">ProjectManager Name</td>
         <td class="table-secondary">{{auditResponse. projectName}}</td>
     </tr>
     <tr class="table-dark">
@@ -29,3 +31,4 @@
 </table>
 </div>
 </div>
+</body>

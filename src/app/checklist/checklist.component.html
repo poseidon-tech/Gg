@@ -1,6 +1,8 @@
+<app-header></app-header>
+<body>
 <div class="container">
     <br>
-    <button class="btn-primary" disabled>Add new Record</button>
+    <button class="dark" disabled>Select type of Audit</button>
     <form ngNativeValidate (ngSubmit)="onSubmit()">
       <div class="mb-3 col-md-4">
         <label for="gender" class="form-label">Select AuditType:</label>
@@ -40,4 +42,5 @@
   </table>
   <button type="submit" class="btn btn-primary btn-md">Submit</button>
 </form>
-</div>  
+</div>
+</body>

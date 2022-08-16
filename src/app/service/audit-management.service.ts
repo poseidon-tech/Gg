@@ -36,6 +36,10 @@ export class AuditManagementService {
     {
       return this.httpClient.post<Question[]>(this.checklist_url+"/AuditCheckListQuestions",auditType)
     }
+    public auditcheckListHealth()
+    {
+      return this.httpClient.get(this.checklist_url+"/health-check",{ responseType : 'text'})
+    }
 
    public auditSeverity(projectDetails:ProjectDetails)
     {

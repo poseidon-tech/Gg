@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private loginservice:LoginService ,private router: Router) { }
 
   ngOnInit(): void {
+    
     if(this.loginservice.isUserLoggedIn())
     {
       console.log(this.loginservice.isUserLoggedIn())
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
 
   this.loginservice.logOut()
   location.reload()
+  this.router.navigate(['/login'])
 
 }
 

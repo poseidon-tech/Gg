@@ -1,0 +1,13 @@
+body
+{
+    background-color:#95c2de;
+    margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 85vh;
+}
+.dark
+{
+background-color: black;
+color: aliceblue;
+}

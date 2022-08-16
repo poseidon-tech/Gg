@@ -14,6 +14,9 @@ import { AuthInterceptorInterceptor } from './service/auth-interceptor.intercept
 import { SeverityComponent } from './severity/severity.component';
 import { ProjectDetails } from './models/project-details';
 import { DatePipe } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginAgainComponent } from './login-again/login-again.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { DatePipe } from '@angular/common';
     HeaderComponent,
     FooterComponent,
     ChecklistComponent,
-    SeverityComponent
+    SeverityComponent,
+    PageNotFoundComponent,
+    LoginAgainComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
