@@ -25,7 +25,11 @@
     </tr>
     <br>
     <div class="container">
-       <h4>Remedial Action is:</h4>{{auditResponse.remedialActionDuration}}
+       <h4>Remedial Action is:</h4>&nbsp;&nbsp;&nbsp;&nbsp;{{auditResponse.remedialActionDuration}}
+    </div>
+    <hr>
+    <div class="container">
+        <button type="button" class="btn btn-primary" (click)="query()">Make Another Query</button>
     </div>
 </tbody>
 </table>

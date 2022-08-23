@@ -68,5 +68,8 @@ export class SeverityComponent implements OnInit {
     this.showResult();
     })
   }
-
+query()
+{
+  this.router.navigate(['checklistType'])
+}
 }

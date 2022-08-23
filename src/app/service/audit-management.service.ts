@@ -19,7 +19,7 @@ export class AuditManagementService {
   
   private auth_url ="http://localhost:8100/auth"
   private checklist_url ="http://localhost:8200/checklist"
-  private severity_url ="http://localhost:8300/severity"
+  private severity_url ="http://localhost:8101/severity"
   constructor(private httpClient: HttpClient,private loginService:LoginService,private checklistService:ChecklistService,private datePipe: DatePipe,private project:ProjectDetailsService) { }
     
     public generateToken(authreq:AuthRequest) 
